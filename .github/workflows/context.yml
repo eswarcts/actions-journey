@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Print context
         run: |
-          echo "${{ github.repository }}"
-          echo "${{ github.ref_name }}"
-          echo "${{ github.sha }}"
-          echo "${{ github.event_name }}"
-          echo "${{ runner.os }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "OS: ${{ runner.os }}"
