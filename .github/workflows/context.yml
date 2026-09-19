@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print context
+      - name: Describe this run
         run: |
           echo "Repository: ${{ github.repository }}"
-          echo "Branch: ${{ github.ref }}"
+          echo "Branch: ${{ github.ref_name }}"
           echo "Commit: ${{ github.sha }}"
           echo "Event: ${{ github.event_name }}"
-          echo "OS: ${{ runner.os }}"
+          echo "Runner OS: ${{ runner.os }}"
