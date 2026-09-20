@@ -16,12 +16,12 @@ jobs:
     steps:
       - name: First step
         run: |
-          echo "APP_NAME=$APP_NAME"
-          echo "LOG_LEVEL=$LOG_LEVEL"
+          echo $APP_NAME
+          echo $LOG_LEVEL
 
       - name: Second step
         env:
           LOG_LEVEL: debug
         run: |
-          echo "APP_NAME=$APP_NAME"
-          echo "LOG_LEVEL=$LOG_LEVEL"
+          echo $APP_NAME
+          echo $LOG_LEVEL
