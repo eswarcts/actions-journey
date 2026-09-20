@@ -1,27 +1,20 @@
 name: env-demo
-
-on:
-  push:
+on: push
 
 env:
   APP_NAME: journey
 
 jobs:
-  demo:
+  build:
     runs-on: ubuntu-latest
-
     env:
       LOG_LEVEL: info
 
     steps:
-      - name: First step
-        run: |
-          echo $APP_NAME
-          echo $LOG_LEVEL
+      - name: Default log level
+        run: echo "$APP_NAME uses log level $LOG_LEVEL"
 
-      - name: Second step
+      - name: Debug log level
         env:
           LOG_LEVEL: debug
-        run: |
-          echo $APP_NAME
-          echo $LOG_LEVEL
+        run: echo "$APP_NAME uses log level $LOG_LEVEL"
